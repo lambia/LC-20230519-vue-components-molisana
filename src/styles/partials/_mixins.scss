@@ -1,0 +1,21 @@
+@mixin display-flex {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+@mixin justify($position: 'center') {
+    display: flex;
+
+    @if $position =='center' {
+        justify-content: center;
+    }
+
+    @else if $position =='start' {
+        justify-content: flex-start;
+    }
+
+    @else if $position =='end' {
+        justify-content: flex-end;
+    }
+}

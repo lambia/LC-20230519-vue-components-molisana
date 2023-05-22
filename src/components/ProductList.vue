@@ -1,21 +1,38 @@
 <script>
 export default {
-    name: "ProductList"
+    name: "ProductList",
+    props: {
+        title: String,
+        products: Array
+    },
+    data() {
+        return {
+
+        }
+    },
+    mounted() {
+        //Questo darebbe un warning, non è possibile mutare dati nelle props
+        // this.title = "Nuovo Titolo Aggiornato";
+    }
 }
 </script>
 
 <template>
     <div>
+        <h3>{{ title }}</h3>
         <ul>
-            <li>Penne rigate</li>
-            <li>Linguine</li>
-            <li>Scialatielli</li>
+            <li v-for="product in products">{{ product }}</li>
         </ul>
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+div {
+    margin-top: 2rem;
+}
+
 ul {
     list-style-type: none;
+    margin-top: 0.5rem;
 }
 </style>

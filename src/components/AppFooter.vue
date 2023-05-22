@@ -6,7 +6,7 @@
     </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 /* questo stile sovrascrive quello definito nell'app.vue o in style.css */
 footer {
     text-align: center;
